@@ -2,6 +2,7 @@ package control;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class BaseDatos {
 	/*-----------TERCERA EVALUACION-----------------*/
@@ -22,6 +23,15 @@ public class BaseDatos {
 		this.dbName = dbName;
 		this.dbUser = dbUser;
 		this.dbPass = dbPass;
+		try {
+			//Class.forName("com.mysql.cj.jdbc.Driver");
+			this.conexion = DriverManager.getConnection("jdbc:mysql://localhost/sakila?"
+							+ "user=root&password=Chachan4567");
+			
+			System.out.println("Conectado......");
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		} 
 		
 	}
 	

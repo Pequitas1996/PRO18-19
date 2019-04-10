@@ -1547,16 +1547,10 @@ public class Ejercicios {
 		Ejercicios ejercicios = new Ejercicios();
 		
 		/*--------TERCERA EVALUACION-------------*/
-		BaseDatos bd = new BaseDatos();
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-		} catch (ClassNotFoundException e1) {
-			System.out.println("Driver no found");
-		}
-		bd.setHost("localhost:3304");
-		bd.setDbName("sakila");
-		bd.setDbUser("root");
-		bd.setDbPass("1234");
+		//BaseDatos bd = new BaseDatos();
+		BaseDatos bd = new BaseDatos("localhost:3306", "sakila", "root", "Chachan4567");
+		
+	
 		/*-----------------SEGUNDA EVALUACION--------------*/
 
 		/*-----------05/02/2019---------------*/
@@ -1600,7 +1594,7 @@ public class Ejercicios {
 		    traverse(inputFolder, "");
 		*/
 		/*--------28/03/2019-------------*/
-		try {
+		/*try {
 			Ejercicios.mezclaFicherosOrdenados("ficheros/fichero1.txt", "ficheros/fichero2.txt", "ficheros/ficheroMezclado.txt");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -1608,7 +1602,7 @@ public class Ejercicios {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		// ejercicios.pruebaSWING();
 		// ejercicios.introListas();
 		// ejercicios.introMapas();
