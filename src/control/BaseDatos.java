@@ -23,17 +23,23 @@ public class BaseDatos {
 		this.dbName = dbName;
 		this.dbUser = dbUser;
 		this.dbPass = dbPass;
-		try {
-			//Class.forName("com.mysql.cj.jdbc.Driver");
+		try { //metodo para poder conectarse a la base de datos con el driver
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			this.conexion = DriverManager.getConnection("jdbc:mysql://localhost/sakila?"
-							+ "user=root&password=Chachan4567");
+							+ "user=root&password=Chachan4567&serverTimezone=UTC");
 			
 			System.out.println("Conectado......");
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		} 
 		
 	}
+	/*---------------------23/04/2019----------------------*/
+	/*Hacer un metodo donde crear una tabla actor y que devuelva una lista de Actores*/
+	
 	
 	public BaseDatos() {
 		super();

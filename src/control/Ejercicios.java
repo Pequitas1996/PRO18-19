@@ -1567,9 +1567,7 @@ public class Ejercicios {
 		
 		//ejercicios.muestraClasificacion();
 		
-		/*------------20/02/2019----------------*/
-		//ejercicios.entradaTecladoAFichero("ficheros/teclado.txt");
-		//ejercicios.grabarTiradasDado(1000000);
+		/*------------20/02/2019----------------*/ 
 		
 		/*-----------21/02/2019-----------------*/
 		//ejercicios.crearFicheroObjetoEquipo();
