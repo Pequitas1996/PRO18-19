@@ -37,6 +37,7 @@ import modelo.Estudiante;
 import modelo.Jugador;
 import modelo.Partido;
 import modelo.Persona;
+import modelo.dao.AccesoDatos;
 
 public class Ejercicios {
 	
@@ -1548,8 +1549,13 @@ public class Ejercicios {
 		
 		/*--------TERCERA EVALUACION-------------*/
 		//BaseDatos bd = new BaseDatos();
-		BaseDatos bd = new BaseDatos("localhost:3306", "sakila", "root", "Chachan4567");
+		//BaseDatos bd = new BaseDatos("localhost:3306", "sakila", "root", "Chachan4567");
 		
+		/*---------25/04/2019--------------*/
+		//AccesoDatos aDatos = new AccesoDatos();
+		//aDatos.recorreTabla();
+		//forma de llamarlo por la clase colocando el metodo en Static
+		AccesoDatos.recorreTabla();
 	
 		/*-----------------SEGUNDA EVALUACION--------------*/
 

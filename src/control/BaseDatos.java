@@ -3,6 +3,10 @@ package control;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 
 public class BaseDatos {
 	/*-----------TERCERA EVALUACION-----------------*/
@@ -25,8 +29,13 @@ public class BaseDatos {
 		this.dbPass = dbPass;
 		try { //metodo para poder conectarse a la base de datos con el driver
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			this.conexion = DriverManager.getConnection("jdbc:mysql://localhost/sakila?"
-							+ "user=root&password=Chachan4567&serverTimezone=UTC");
+			/*this.conexion = DriverManager.getConnection("jdbc:mysql://localhost/sakila?"
+							+ "user=root&password=Chachan4567&serverTimezone=UTC");*/
+			
+			//forma de poder conectarse a cualquier base de datos desde los parametros de la clase...
+			this.conexion = DriverManager.getConnection("jdbc:mysql://" + host + "/" + dbName  
+					+ "?&user=" + dbUser + "&password=" + dbPass + "&serverTimezone=UTC");
+					//+ "user=root&password=Chachan4567&serverTimezone=UTC");
 			
 			System.out.println("Conectado......");
 		} catch (SQLException e) {
@@ -37,8 +46,7 @@ public class BaseDatos {
 		} 
 		
 	}
-	/*---------------------23/04/2019----------------------*/
-	/*Hacer un metodo donde crear una tabla actor y que devuelva una lista de Actores*/
+	
 	
 	
 	public BaseDatos() {
