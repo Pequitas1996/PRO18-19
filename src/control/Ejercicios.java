@@ -1552,11 +1552,17 @@ public class Ejercicios {
 		//BaseDatos bd = new BaseDatos("localhost:3306", "sakila", "root", "Chachan4567");
 		
 		/*---------25/04/2019--------------*/
-		//AccesoDatos aDatos = new AccesoDatos();
+		AccesoDatos aDatos = new AccesoDatos();
 		//aDatos.recorreTabla();
+		
 		//forma de llamarlo por la clase colocando el metodo en Static
-		AccesoDatos.recorreTabla();
+		AccesoDatos.recorreTabla("liga", "equipos");
 	
+		/*--------30/04/2019----------*/
+		//aDatos.insertaEquiposDesdeFichero("ficheros/equipos.txt");
+		//aDatos.insertarPartidosDesdeFichero("ficheros/partidos.txt");
+		//aDatos.insertarJugadoresDesdeFichero("ficheros/jugadores2.txt");
+		
 		/*-----------------SEGUNDA EVALUACION--------------*/
 
 		/*-----------05/02/2019---------------*/
