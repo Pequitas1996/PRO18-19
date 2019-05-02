@@ -141,6 +141,7 @@ public class AccesoDatos {
 	public static void recorreTabla(String bddatos, String tabla){
 		//mostrar por consola TODOS los actores...
 		//CONECTAR BBDD...
+		//acceso a metadatos
 		try {
 			BaseDatos bd = new BaseDatos("localhost", bddatos, "root", "Chachan4567");
 			Connection conexion = bd.getConexion(); //variable para conectarse a las bases de datos
