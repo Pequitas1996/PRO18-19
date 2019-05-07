@@ -148,17 +148,16 @@ public class AccesoDatos {
 			Statement stnt = conexion.createStatement();
 			ResultSet rS = stnt.executeQuery("SELECT * FROM " + tabla + " WHERE 1");
 			ResultSetMetaData mD = rS.getMetaData();
+			
 			for (int i = 1; i < mD.getColumnCount(); i++) {
 				System.out.print(i + " -> " + mD.getColumnName(i) + "\t\t");
 			}
 			System.out.println();
-			
 			//vamos a iterar en el ResulSet
-			while(rS.next()){ //es parecido al readLine de los ficheros
+			while (rS.next()) {
 				for (int i = 1; i < mD.getColumnCount(); i++)
 					System.out.print(rS.getString(i) + "\t\t");
-				
-				System.err.println();
+				System.out.println();
 			}
 			//cerrar la conexion
 			rS.close();
